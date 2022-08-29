@@ -1,0 +1,42 @@
+body{
+    background-image: url("https://eskipaper.com/images/red-wallpaper-14.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+table > tbody > tr:hover{
+    background-color:#42DB51;
+}
+
+#header{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+#header > #title{
+    margin-top: 1%;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+table{
+    width: 100%;
+}
+
+table{
+    font-size: 12px;
+}
+
+#aa{
+    padding-top: 15%;
+}
+@media (min-width: 1080px) {
+    #aa{
+        padding-top: 5%;
+    }
+  }
