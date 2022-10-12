@@ -1,0 +1,47 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/4e/06/9f/4e069feaf61c2fd95edea94c58704289.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#title {
+    color: black;
+}
+
+
+table > tbody > tr:hover{
+    background-color:#0e200e;
+}
+
+#header{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+#header > #title{
+    margin-top: 1%;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+table{
+    width: 100%;
+}
+
+table{
+    font-size: 12px;
+}
+
+#aa{
+    padding-top: 15%;
+}
+@media (min-width: 1080px) {
+    #aa{
+        padding-top: 5%;
+    }
+  }

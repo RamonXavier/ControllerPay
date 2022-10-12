@@ -1,3 +1,38 @@
 .socialPadding{
     padding-top:20%;
 }
+
+/* -------------------------------- */
+
+#header {
+    background: url(https://images.pexels.com/photos/3758748/pexels-photo-3758748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center center / cover no-repeat ;
+   /* background : #ffffff; */
+   /* background: #77A1D3;  */
+   /* background: -webkit-linear-gradient(to bottom, #000000, #7dce7698, #d1dce9);   */
+   /* background: linear-gradient(to bottom, #000000, #ca4a4198, #d1dce9);  */
+   background-image: url(https://images2.alphacoders.com/114/114920.jpg);
+   background-size: cover;
+   }
+
+.display-3 {
+    font-size: 155px;
+    font-weight: bold;
+    color: white;
+}
+
+.cardTiposControle {
+    height: 420px;
+}
+
+.card-img-top {
+    max-height: 250px!important;
+}
+
+@media (max-width: 1200px)
+{
+    .display-3 {font-size: 80px;}
+}
+@media (max-width: 600px)
+{
+    .display-3 {font-size: 40px;}
+}
