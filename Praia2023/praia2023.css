@@ -37,11 +37,20 @@ table{
     font-size: 12px;
 }
 
-#aa{
-    padding-top: 15%;
+.aa{
+    padding-top: 5%;
+}
+
+.texto_card {
+    color: black;
+}
+
+.caixaVan {
+    font-weight: bold;
+    font-size: 48px;
 }
 @media (min-width: 1080px) {
-    #aa{
-        padding-top: 5%;
+    .aa{
+        padding-top: 0%;
     }
   }
