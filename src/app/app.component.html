@@ -1,0 +1,34 @@
+
+
+<section *ngIf="!menuSelecionado || menuSelecionado == ''" class="price-sec">
+  <div class="container-fluid">
+      <div class="container">
+        <div class="row ptables-head">
+          <h1 class="text-center">Pagamentos 2025</h1>
+        </div>
+          <div class="row">
+              <div class="col-sm-6 price-table">
+                  <div class="card text-center">
+                      <div class="title">
+                          <img src="https://cdn.worldvectorlogo.com/logos/netflix-logo-icon.svg" width="100" height="100">
+                          <h2>Netflix</h2>
+                      </div>
+                      <a (click)="escolherMenu(menuNetflix)">Acessar</a>
+                  </div>
+              </div>
+               <div class="col-sm-6 price-table">
+                  <div class="card text-center">
+                      <div class="title">
+                          <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png" width="100" height="100">
+                          <h2>Spotify</h2>
+                      </div>
+                      <a (click)="escolherMenu(menuSpotify)">Acessar</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<app-netflix2025 *ngIf="menuSelecionado == menuNetflix"></app-netflix2025>
+<app-spotify2025 *ngIf="menuSelecionado == menuSpotify"></app-spotify2025>

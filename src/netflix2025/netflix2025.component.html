@@ -1,0 +1,55 @@
+
+<section class="price-sec">
+  <div class="container-fluid">
+      <div class="container">
+        <div class="row ptables-head">
+          <h1 class="text-center">Pagamentos Netflix 2025</h1>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Liberar Acesso Admin
+        </button>
+      </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let pagamento of pagamentos; let i = index" class="col-12 col-sm-6 p-2">
+          <div class="card cardPagamento" [ngClass]="{'cardPendente': pagamento.Status == 'Pendente', 'cardPago': pagamento.Status == 'Pago'}">
+            <div class="card-body">
+              <h5 class="card-title">{{pagamento.Mes}}</h5>
+              <p>{{pagamento.Assinante}} / R${{pagamento.Valor}}</p>
+              <p>Situação: {{pagamento.Status}}</p>
+              <div *ngIf="acessoLiberado">
+                <button *ngIf="pagamento.Status == 'Pendente' && !pagamento.Atualizando" (click)="definirComoPago(pagamento)" class="btn btn-success">
+                  Definir como pago
+                </button>
+                <div *ngIf="pagamento.Atualizando" class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Digite a senha de atualização</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" type="text" name="" [(ngModel)]="senhaParaAtualizar">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Desistir</button>
+        <button type="button" class="btn btn-primary" (click)="verificarSenha(senhaParaAtualizar)">Liberar</button>
+      </div>
+    </div>
+  </div>
+</div>
